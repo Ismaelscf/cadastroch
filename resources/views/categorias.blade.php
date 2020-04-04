@@ -18,8 +18,8 @@
                     <td>{{$cat->id}}</td>
                     <td>{{$cat->nome}}</td>
                     <td>
-                        <a href="/categorias/editar/{{$cat->id}}" class="btn btn-sm btn-primary">Editar</a>
-                        <a href="/categorias/apagar/{{$cat->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                        <a href="{{ url('/categorias/editar/'.$cat->id) }}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{{ url('/categorias/apagar/'.$cat->id) }}" class="btn btn-sm btn-danger">Apagar</a>
                     </td>
                 </tr>    
                 @endforeach
@@ -29,7 +29,7 @@
     </div>
 
     <div class="card-footer">
-        <a href="/categorias/novo" class="btn btn-sm btn-primary" role="button">Nova Categoria</a>
+        <a href="{{ url('/categorias/novo') }}" class="btn btn-sm btn-primary" role="button">Nova Categoria</a>
     </div>
 </div>
 
