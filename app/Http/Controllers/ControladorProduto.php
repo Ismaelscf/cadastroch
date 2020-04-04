@@ -40,7 +40,7 @@ class ControladorProduto extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nomeProduto'=> 'required|min:3|max:20|unique:produtos,nome'
+            'nomeProduto'=> 'required|min:3|max:35|unique:produtos,nome'
         ]);
 
         $prod = new Produto();
@@ -49,8 +49,7 @@ class ControladorProduto extends Controller
          $prod->preco = $request->input('precoProduto');
          $prod->categoria_id = $request->input('catProduto');
          $prod->save();
-
-
+         
          return redirect('/produtos');
     }
 

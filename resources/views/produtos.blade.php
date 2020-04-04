@@ -38,5 +38,4 @@
         <a href="/produtos/novo" class="btn btn-sm btn-primary" role="button">Novo Produto</a>
     </div>
 </div>
-
 @endsection

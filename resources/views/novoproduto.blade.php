@@ -46,8 +46,4 @@
     @endif
 
 </div>
-
-{{var_dump($errors)}}
-
-
 @endsection

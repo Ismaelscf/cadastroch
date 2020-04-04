@@ -14,6 +14,10 @@
         <li @if($current == "categorias") class="nav-item active" @else class="nav-item" @endif>
             <a class="nav-link" href="/categorias">Categorias <span class="sr-only">(current)</span></a>
         </li>
+
+        <li @if($current == "Pedidos") class="nav-item active" @else class="nav-item" @endif>
+          <a class="nav-link" href="/pedidos">Pedidos<span class="sr-only">(current)</span></a>
+      </li>
       </ul>
        
     </div>
