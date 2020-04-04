@@ -12,7 +12,7 @@
                         Aqui você cadastra todos seus produtos.
                         Só não se esqueça de cadastrar previamente as categorias...
                     </p>
-                    <a href="/produtos" class="btn btn-primary">Cadastre seus produtos</a>
+                    <a href="{{ url('/produtos') }}" class="btn btn-primary">Cadastre seus produtos</a>
                 </div>
             </div>
 
@@ -22,7 +22,7 @@
                     <p class="card-text">
                         Aqui você cadastra todos suas categorias.
                     </p>
-                    <a href="/categorias" class="btn btn-primary">Cadastre suas categorias</a>
+                    <a href="{{ url('/categorias') }}" class="btn btn-primary">Cadastre suas categorias</a>
                 </div>
             </div>
 

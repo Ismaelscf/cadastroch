@@ -4,7 +4,7 @@
 
 <div class="card border">
     <div class="card-body">
-        <form action="\produtos\{{$prod->id}}" method="POST">
+        <form action="{{ url('/produtos/'.$prod->id) }}" method="POST">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">

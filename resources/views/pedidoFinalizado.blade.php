@@ -42,6 +42,7 @@
 
     <div class="card-footer">
         <button type="button" onclick="imprimir()" class="btn btn-success">Imprimir</button>
+        <a href="{{ url('/pedidos') }}" class="btn btn-primary">Novo pedido</a>
     </div>
 </div>
 @endsection

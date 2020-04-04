@@ -14,7 +14,7 @@
                 <th>Quantidade</th>
             </thead>
             <tbody>
-            <form action="\pedidos" method="POST">
+            <form action="{{ url('/pedidos') }}" method="POST">
                 @csrf
                 @foreach ($prod as $prod)
                 <tr>

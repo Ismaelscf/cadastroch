@@ -4,7 +4,7 @@
 
 <div class="card border">
     <div class="card-body">
-        <form action="/categorias/{{$cat->id}}" method="POST">
+        <form action="{{ url('/categorias/'.$cat->id) }}" method="POST">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-12">

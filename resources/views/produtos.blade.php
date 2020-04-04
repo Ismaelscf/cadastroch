@@ -24,8 +24,8 @@
                     <td>{{$prod->descricao}}</td>
                     <td>{{$prod->categoria_id}}</td>
                     <td>
-                        <a href="/produtos/editar/{{$prod->id}}" class="btn btn-sm btn-primary">Editar</a>
-                        <a href="/produtos/apagar/{{$prod->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                        <a href="{{ url('/produtos/editar/'.$prod->id) }}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{{ url('/produtos/apagar/'.$prod->id) }}" class="btn btn-sm btn-danger">Apagar</a>
                     </td>
                 </tr>    
                 @endforeach
@@ -35,7 +35,7 @@
     </div>
 
     <div class="card-footer">
-        <a href="/produtos/novo" class="btn btn-sm btn-primary" role="button">Novo Produto</a>
+        <a href="{{ url('/produtos/novo') }}" class="btn btn-sm btn-primary" role="button">Novo Produto</a>
     </div>
 </div>
 @endsection
