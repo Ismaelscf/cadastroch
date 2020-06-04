@@ -38,10 +38,25 @@
                     <input type="text" step="0.01" class="form-control" name="cliente" id="cliente">
                 </div>
 
-                <div class="form-group col-md-2">
-                    <label for="frete">Frete</label>
-                    <input type="number" step="0.01" class="form-control" name="frete" id="frete">
-                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="frete">Frete</label>
+                      <input type="number" step="0.01" class="form-control" id="frete" name="frete">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="pagamento">Forma de Pagamento</label>
+                      <select id="pagamento" name="pagamento" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Débito">Débito</option>
+                        <option value="Crédito">Crédito</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="infPag">Inf. de Pagamento</label>
+                      <input type="text" class="form-control" id="infPag" name="infPag">
+                    </div>
+                  </div>
             
                 <div class="form-group col-md-12">
                     <label for="obs">Observações no Preparo</label>

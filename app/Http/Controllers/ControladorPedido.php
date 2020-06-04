@@ -45,6 +45,8 @@ class ControladorPedido extends Controller
         $pedido->obs = $request->input('obs');
         $pedido->entrega = $request->input('entrega');
         $pedido->frete = $request->input('frete');
+        $pedido->pagamento = $request->input('pagamento');
+        $pedido->infPag = $request->input('infPag');
         $pedido->save();
 
         $ped = $request->ped;
@@ -90,9 +92,17 @@ class ControladorPedido extends Controller
     }
     public function gerapdf($id){
 
+        $pedido = Pedido::find($id);
+        $preco = $pedido->frete;
+        if (count($pedido->produtos)> 0) {
+            foreach ($pedido->produtos as $prod) {
+                $preco = $preco + ($prod->preco * $prod->pivot->quantidade);
+            }
+
+        }
         $view = view('vv');
         $pdf = \App::make('dompdf.wrapper');
-        $pdf->loadHTML($view);
+        $pdf->loadHTML('$view', compact('pedido'));
         return $pdf->download();
     }
 

@@ -17,6 +17,8 @@ class CreatePedidosTable extends Migration
             $table->bigIncrements('id');
             $table->string('cliente');
             $table->float('frete');
+            $table->string('pagamento');
+            $table->string('infPag');
             $table->string('obs');
             $table->string('entrega');
             $table->timestamps();
